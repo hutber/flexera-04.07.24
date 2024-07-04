@@ -21,13 +21,13 @@ const RepoItemSkeleton: React.FC = () => (
   <Item>
     <SkeletonTheme baseColor="#202020" highlightColor="#444">
       <Info>
-        <Skeleton circle height={50} width={50} />
+        <Skeleton circle height={50} width={50} aria-label="Avatar skeleton" />
         <div style={{ marginLeft: 20 }}>
-          <Skeleton width={200} />
-          <Skeleton width={300} />
+          <Skeleton width={200} aria-label="Name skeleton" />
+          <Skeleton width={300} aria-label="Description skeleton" />
         </div>
       </Info>
-      <Skeleton width={80} height={40} />
+      <Skeleton width={80} height={40} aria-label="Button skeleton" />
     </SkeletonTheme>
   </Item>
 );

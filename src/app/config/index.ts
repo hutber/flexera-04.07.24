@@ -1,3 +1,3 @@
-import api from './api';
+import api from '@/app/config/api';
 
 export default { api };

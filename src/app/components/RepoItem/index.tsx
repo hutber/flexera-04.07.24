@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Repository } from '@/app/utils/api';
 import FlagButton from '@/app/components/FlagButton';
 import RepoItemSkeleton from '@/app/components/RepoItem/RepoItemSkeleton';
+
+import { Repository } from '@/app/types/apis';
 
 import 'react-loading-skeleton/dist/skeleton.css';
 
@@ -44,7 +45,7 @@ const RepoItem: React.FC<RepoItemProps> = ({
   if (loading) {
     return <RepoItemSkeleton />;
   }
-  console.info(repo);
+
   return (
     <Item>
       <Info href={repo?.html_url} target="_blank">

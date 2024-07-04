@@ -1,24 +1,7 @@
 import axios from 'axios';
 
 import config from '@/app/config';
-
-export interface RepositoryOwner {
-  login: string;
-  id: number;
-  avatar_url: string;
-}
-
-export interface Repository {
-  id: string;
-  full_name: string;
-  description: string;
-  owner: RepositoryOwner;
-}
-
-export interface FetchReposResponse {
-  items: Repository[];
-  totalCount: number;
-}
+import { FetchReposResponse } from '@/app/types/apis';
 
 export const fetchData = async (
   url: string,
@@ -29,6 +12,7 @@ export const fetchData = async (
 };
 
 export const fetchRepos = async (
+  // should likely be in a better place
   page: number,
   perPage: number,
 ): Promise<FetchReposResponse> => {
