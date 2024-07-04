@@ -1,0 +1,6 @@
+node_modules
+infrastructure
+public
+scripts
+.dist
+.next
